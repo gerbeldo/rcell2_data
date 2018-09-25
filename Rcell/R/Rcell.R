@@ -149,12 +149,13 @@ load.cellID.data <-
 	}
 
 	cat("\ncreating variables... \n")
-	for(ipos in loaded.pos){
+
+        for(ipos in loaded.pos){
             pos.data[[ipos]] <- transform(pos.data[[ipos]],
                                           pos = ipos,
                                           ucid = ipos*1e6+cellID,
                                           QC = TRUE)
-	}
+        }
 
 	#selecting proper names for the channels
 	#atempting to use first letter of channel identifier
